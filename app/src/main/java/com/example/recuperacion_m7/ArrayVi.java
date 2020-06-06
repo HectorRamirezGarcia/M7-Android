@@ -4,10 +4,6 @@ public class ArrayVi {
     private String name;
     private String valoration;
 
-    public ArrayVi() {
-
-    }
-
     public ArrayVi(String name, String valoration) {
         this.name = name;
         this.valoration = valoration;

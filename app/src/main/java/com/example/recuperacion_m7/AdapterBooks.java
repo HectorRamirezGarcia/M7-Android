@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -19,7 +20,7 @@ public class AdapterBooks extends RecyclerView.Adapter<AdapterBooks.ViewHolderBo
 
     @Override
     public ViewHolderBooks onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_books, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_view_books, parent, false);
         ViewHolderBooks vh = new ViewHolderBooks(view);
         return vh;
     }
