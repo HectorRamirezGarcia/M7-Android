@@ -22,12 +22,14 @@ public class view_books extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.item_list_books);
 
-        //asigno la arraylist a una variable de tipo arraylist
+        //obtengo la referencia de recyclerbooks
         RecyclerView recyclerbooks = findViewById(R.id.RecyclerId);
+
+        //establece un LinearLayoutManager con orientacion vertical predeterminada
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerbooks.setLayoutManager(linearLayoutManager);
 
-        //mando los elementos de la arraylist a el adapter
+        //envio los elementos de la arraylist a el adapter
         AdapterBooks adapter = new AdapterBooks(listbooks);
         recyclerbooks.setAdapter(adapter);
     }
