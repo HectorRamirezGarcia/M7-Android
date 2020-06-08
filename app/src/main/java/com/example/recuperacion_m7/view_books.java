@@ -15,7 +15,8 @@ import java.util.ArrayList;
 public class view_books extends AppCompatActivity {
 
     public ArrayList<ArrayVi> listbooks = new ArrayList<ArrayVi>();
-    public String[] listname, listvaloration;
+    String[] listname = new String[10];
+    String[] listvaloration = new String[10];
     int i = 0;
 
 

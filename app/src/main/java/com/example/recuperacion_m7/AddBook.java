@@ -12,8 +12,8 @@ import java.util.ArrayList;
 
 public class AddBook extends AppCompatActivity {
 
-    String [] listname;
-    String[] listvaloration;
+    public String[] listname = new String[10];
+    public String[] listvaloration = new String[10];
 
     int contador = 0;
 

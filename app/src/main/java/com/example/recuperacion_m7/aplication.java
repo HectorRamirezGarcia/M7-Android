@@ -40,7 +40,8 @@ public class aplication extends AppCompatActivity {
 
     public void listbooks(View view) {
         Intent intent = new Intent(this, view_books.class);
-
+        intent.putExtra("listname", listname);
+        intent.putExtra("listvaloration", listvaloration);
         startActivity(intent);
     }
 }
