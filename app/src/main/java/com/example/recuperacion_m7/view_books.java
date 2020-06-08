@@ -15,19 +15,21 @@ import java.util.ArrayList;
 public class view_books extends AppCompatActivity {
 
     public ArrayList<ArrayVi> listbooks = new ArrayList<ArrayVi>();
-    String[] listname;
-    String[] listvaloration;
+    public ArrayList<String> listname = new ArrayList<>();
+    public ArrayList<String> listvaloration = new ArrayList<>();
     int i = 0;
+    int comprobante;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         Intent intent = getIntent();
-        listname = intent.getStringArrayExtra("listname");
-        listvaloration = intent.getStringArrayExtra("listvaloration");
+        listname = intent.getStringArrayListExtra("listname");
+        listvaloration = intent.getStringArrayListExtra("listvaloration");
+        comprobante = intent.getIntExtra("comprobante", comprobante);
 
         //añado la lista de libros a la arraylist
-        addbooks(listname, listvaloration);
+        addbooks(listname, listvaloration, comprobante);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.item_list_books);
@@ -46,12 +48,15 @@ public class view_books extends AppCompatActivity {
 
 
     //metodo que añade elementos a la array
-    private void addbooks(String []listname, String [] listvaloration) {
-        while (i != listname.length) {
-            listbooks.add(new ArrayVi(listname[i], listvaloration[i]));
-            i++;
+    private void addbooks(ArrayList<String> listname, ArrayList<String> listvaloration, int  comprobante) {
+        listbooks.add(new ArrayVi("La cenicienta", "Valoracion = 3"));
+        listbooks.add(new ArrayVi("Un monstruo viene a verme", "Valoracion = 5"));
+        if (comprobante >= 1) {
+            while (i != listname.size()) {
+                listbooks.add(new ArrayVi(listname.get(i), "Valoracion = "+listvaloration.get(i)));
+                i++;
+            }
         }
-
     }
 
 }

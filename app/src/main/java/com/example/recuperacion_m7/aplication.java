@@ -7,10 +7,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class aplication extends AppCompatActivity {
+import java.util.ArrayList;
 
-    String[] listname;
-    String[] listvaloration;
+public class aplication extends AppCompatActivity {
+    public ArrayList<String> listname = new ArrayList<>();
+    public ArrayList<String> listvaloration = new ArrayList<>();
+    int comprobante;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,8 +20,9 @@ public class aplication extends AppCompatActivity {
         setContentView(R.layout.activity_aplication);
 
         Intent intent = getIntent();
-        listname = intent.getStringArrayExtra("listname");
-        listvaloration = intent.getStringArrayExtra("listvaloration");
+        listname = intent.getStringArrayListExtra("listname");
+        listvaloration = intent.getStringArrayListExtra("listvaloration");
+        comprobante = intent.getIntExtra("comprobante", comprobante);
     }
 
     public void addbooks(View view) {
@@ -31,6 +34,7 @@ public class aplication extends AppCompatActivity {
         Intent intent = new Intent(this, view_books.class);
         intent.putExtra("listname", listname);
         intent.putExtra("listvaloration", listvaloration);
+        intent.putExtra("comprobante", comprobante);
         startActivity(intent);
     }
 }

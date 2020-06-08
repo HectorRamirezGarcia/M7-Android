@@ -12,10 +12,10 @@ import java.util.ArrayList;
 
 public class AddBook extends AppCompatActivity {
 
-    public String[] listname = new String[50];
-    public String[] listvaloration = new String[50];
+    public ArrayList<String> listname = new ArrayList<>();
+    public ArrayList<String> listvaloration = new ArrayList<>();
 
-    int contador = 0;
+    int contador = 0, comprobante = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,10 +26,11 @@ public class AddBook extends AppCompatActivity {
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 String namebook = ((EditText) findViewById(R.id.NameBook)).getText().toString();
-                listname[contador] = namebook;
+                listname.add(namebook);
                 String valoration = ((EditText) findViewById(R.id.Valoration)).getText().toString();
-                listvaloration[contador] = valoration;
+                listvaloration.add(valoration);
                 contador ++;
+                comprobante++;
             }
         });
 
@@ -40,7 +41,7 @@ public class AddBook extends AppCompatActivity {
         Intent intent = new Intent(this, aplication.class);
         intent.putExtra("listname", listname);
         intent.putExtra("listvaloration", listvaloration);
-        setResult(RESULT_OK, intent);
+        intent.putExtra("comprobante", comprobante);
         startActivity(intent);
     }
 
