@@ -15,24 +15,16 @@ import java.util.ArrayList;
 public class view_books extends AppCompatActivity {
 
     public ArrayList<ArrayVi> listbooks = new ArrayList<ArrayVi>();
-    String[] listname = new String[10];
-    String[] listvaloration = new String[10];
+    String[] listname;
+    String[] listvaloration;
     int i = 0;
-
-
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == 1) {
-            if (resultCode == RESULT_OK) {
-                listname = data.getStringArrayExtra("listname");
-                listvaloration = data.getStringArrayExtra("listvaloration");
-            }
-        }
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        Intent intent = getIntent();
+        listname = intent.getStringArrayExtra("listname");
+        listvaloration = intent.getStringArrayExtra("listvaloration");
 
         //añado la lista de libros a la arraylist
         addbooks(listname, listvaloration);

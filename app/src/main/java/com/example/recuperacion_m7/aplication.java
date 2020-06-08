@@ -18,23 +18,12 @@ public class aplication extends AppCompatActivity {
         setContentView(R.layout.activity_aplication);
 
         Intent intent = getIntent();
-    }
-
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == 1) {
-            if (resultCode == RESULT_OK) {
-                listname = data.getStringArrayExtra("listname");
-                listvaloration = data.getStringArrayExtra("listvaloration");
-            }
-        }
+        listname = intent.getStringArrayExtra("listname");
+        listvaloration = intent.getStringArrayExtra("listvaloration");
     }
 
     public void addbooks(View view) {
         Intent intent = new Intent(this, AddBook.class);
-        intent.putExtra("listname", listname);
-        intent.putExtra("listvaloration", listvaloration);
         startActivity(intent);
     }
 
