@@ -28,6 +28,7 @@
         android:layout_marginStart="44dp"
         android:layout_marginBottom="90dp"
         android:background="@drawable/button_rounded"
+        android:onClick="addbooks"
         android:text="Añadir Libro"
         android:textColor="@color/design_default_color_background"
         app:layout_constraintBottom_toTopOf="@+id/remove_all_books"

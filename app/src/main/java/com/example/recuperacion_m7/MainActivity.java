@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
                 String password = ((EditText) findViewById(R.id.PasswordLogin)).getText().toString();
                 for (int i = 0; i < ArrayUserNames.length; i++){
                     if (username.equals(ArrayUserNames[i])&& password.equals(ArrayPasswords[i])){
-                        Toast.makeText(getApplicationContext(), "El usuario introducido y contraseña son correctos", Toast.LENGTH_SHORT).show();
                         logintrue(view);
                     }
                     else {

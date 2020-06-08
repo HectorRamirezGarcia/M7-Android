@@ -1,10 +1,13 @@
 package com.example.recuperacion_m7;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import java.util.ArrayList;
@@ -12,12 +15,26 @@ import java.util.ArrayList;
 public class view_books extends AppCompatActivity {
 
     public ArrayList<ArrayVi> listbooks = new ArrayList<ArrayVi>();
+    public String[] listname, listvaloration;
+    int i = 0;
+
+
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == 1) {
+            if (resultCode == RESULT_OK) {
+                listname = data.getStringArrayExtra("listname");
+                listvaloration = data.getStringArrayExtra("listvaloration");
+            }
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         //añado la lista de libros a la arraylist
-        addbooks();
+        addbooks(listname, listvaloration);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.item_list_books);
@@ -36,8 +53,12 @@ public class view_books extends AppCompatActivity {
 
 
     //metodo que añade elementos a la array
-    private void addbooks() {
-        listbooks.add(new ArrayVi("Cenicienta", "5"));
+    private void addbooks(String []listname, String [] listvaloration) {
+        while (i != listname.length) {
+            listbooks.add(new ArrayVi(listname[i], listvaloration[i]));
+            i++;
+        }
+
     }
 
 }
