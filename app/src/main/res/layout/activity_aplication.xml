@@ -11,66 +11,76 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="120dp"
-        android:layout_marginTop="88dp"
         android:layout_marginEnd="121dp"
+        android:layout_marginBottom="113dp"
         android:outlineAmbientShadowColor="@color/design_default_color_on_secondary"
         android:outlineSpotShadowColor="@color/design_default_color_on_secondary"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.154"
         app:srcCompat="@drawable/icon" />
 
     <Button
         android:id="@+id/add_book"
         android:layout_width="134dp"
         android:layout_height="134dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginBottom="90dp"
         android:background="@drawable/button_rounded"
         android:onClick="addbooks"
         android:text="Añadir Libro"
         android:textColor="@color/design_default_color_background"
-        app:layout_constraintBottom_toTopOf="@+id/remove_all_books"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.158"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.522" />
 
     <Button
         android:id="@+id/help"
         android:layout_width="134dp"
         android:layout_height="134dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginBottom="120dp"
         android:background="@drawable/button_rounded"
         android:onClick="help"
         android:text="Ayuda"
         android:textColor="@color/design_default_color_background"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.87"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.82" />
 
     <Button
         android:id="@+id/remove_all_books"
         android:layout_width="134dp"
         android:layout_height="134dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginBottom="123dp"
         android:background="@drawable/button_rounded"
         android:onClick="removebooks"
         android:text="Eliminar todos tus libros"
         android:textColor="@color/design_default_color_background"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.158"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.821" />
 
     <Button
         android:id="@+id/view_book"
         android:layout_width="134dp"
         android:layout_height="134dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginBottom="90dp"
         android:background="@drawable/button_rounded"
         android:onClick="listbooks"
         android:text="Listar Libros"
         android:textColor="@color/design_default_color_background"
-        app:layout_constraintBottom_toTopOf="@+id/help"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.87"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.521" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

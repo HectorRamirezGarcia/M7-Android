@@ -12,10 +12,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="120dp"
         android:layout_marginEnd="121dp"
-        android:layout_marginBottom="79dp"
-        app:layout_constraintBottom_toTopOf="@+id/NameBook"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.082"
         app:srcCompat="@drawable/icon" />
 
     <EditText
@@ -24,14 +26,15 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="98dp"
         android:layout_marginEnd="99dp"
-        android:layout_marginBottom="88dp"
         android:ems="10"
         android:hint="Nombre del libro"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/Valoration"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.436" />
 
     <EditText
         android:id="@+id/Valoration"
@@ -39,14 +42,15 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginEnd="97dp"
-        android:layout_marginBottom="104dp"
         android:ems="10"
         android:hint="Valoracion"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/buttonAdd"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.564" />
 
     <Button
         android:id="@+id/buttonAdd"
@@ -54,11 +58,13 @@
         android:layout_height="89dp"
         android:layout_marginStart="143dp"
         android:layout_marginEnd="143dp"
-        android:layout_marginBottom="165dp"
         android:background="@drawable/button_rounded"
         android:text="Añadir"
         android:textColor="@color/design_default_color_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.771" />
 </androidx.constraintlayout.widget.ConstraintLayout>
