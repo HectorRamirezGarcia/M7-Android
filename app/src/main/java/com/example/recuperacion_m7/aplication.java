@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -37,4 +38,16 @@ public class aplication extends AppCompatActivity {
         intent.putExtra("comprobante", comprobante);
         startActivity(intent);
     }
+    public void removebooks(View view) {
+        for (int i = 0; i < listname.size(); i++){
+            listname.remove(i);
+            listvaloration.remove(i);
+        }
+        Toast.makeText(getApplicationContext(), "Se han borrado los libros que tu añadiste ", Toast.LENGTH_SHORT).show();
+    }
+    public void help(View view) {
+        Intent intent = new Intent(this, Help.class);
+        startActivity(intent);
+    }
+
 }

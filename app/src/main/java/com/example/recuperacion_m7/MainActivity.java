@@ -19,8 +19,8 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    public String[] ArrayUserNames = new String[20];
-    public String[] ArrayPasswords = new String[20];
+    public String UserName;
+    public String Password;
     public String url;
 
     @Override
@@ -28,25 +28,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ArrayUserNames[0] = "admin";
-        ArrayPasswords[0] = "admin";
-
-
         Button buttonlogin = (Button) findViewById(R.id.buttonLogin);
         buttonlogin.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                String username = ((EditText) findViewById(R.id.NameUserLogin)).getText().toString();
-                String password = ((EditText) findViewById(R.id.PasswordLogin)).getText().toString();
-                for (int i = 0; i < ArrayUserNames.length; i++){
-                    if (username.equals(ArrayUserNames[i])&& password.equals(ArrayPasswords[i])){
-                        logintrue(view);
+                UserName = ((EditText) findViewById(R.id.NameUserLogin)).getText().toString();
+                Password = ((EditText) findViewById(R.id.PasswordLogin)).getText().toString();
+                if (UserName.equals("admin")&& Password.equals("admin")){
+                    logintrue(view);
                     }
-                    else {
-                        Toast.makeText(getApplicationContext(), "El usuario introducido o contraseña son incorrectos", Toast.LENGTH_SHORT).show();
+                else {
+                    Toast.makeText(getApplicationContext(), "El usuario introducido o contraseña son incorrectos", Toast.LENGTH_SHORT).show();
                     }
                 }
 
-            }
+
         });
     }
 

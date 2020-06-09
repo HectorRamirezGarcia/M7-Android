@@ -41,6 +41,7 @@
         android:layout_marginEnd="44dp"
         android:layout_marginBottom="120dp"
         android:background="@drawable/button_rounded"
+        android:onClick="help"
         android:text="Ayuda"
         android:textColor="@color/design_default_color_background"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -53,7 +54,8 @@
         android:layout_marginStart="44dp"
         android:layout_marginBottom="123dp"
         android:background="@drawable/button_rounded"
-        android:text="Eliminar todos los libros"
+        android:onClick="removebooks"
+        android:text="Eliminar todos tus libros"
         android:textColor="@color/design_default_color_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

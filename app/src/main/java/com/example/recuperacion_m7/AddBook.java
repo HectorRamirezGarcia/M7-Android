@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -26,10 +27,10 @@ public class AddBook extends AppCompatActivity {
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 String namebook = ((EditText) findViewById(R.id.NameBook)).getText().toString();
-                listname.add(namebook);
                 String valoration = ((EditText) findViewById(R.id.Valoration)).getText().toString();
+                listname.add(namebook);
                 listvaloration.add(valoration);
-                contador ++;
+                contador++;
                 comprobante++;
             }
         });

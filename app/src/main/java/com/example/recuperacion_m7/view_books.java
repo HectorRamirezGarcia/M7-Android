@@ -49,10 +49,8 @@ public class view_books extends AppCompatActivity {
 
     //metodo que añade elementos a la array
     private void addbooks(ArrayList<String> listname, ArrayList<String> listvaloration, int  comprobante) {
-        listbooks.add(new ArrayVi("La cenicienta", "Valoracion = 3"));
-        listbooks.add(new ArrayVi("Un monstruo viene a verme", "Valoracion = 5"));
         if (comprobante >= 1) {
-            while (i != listname.size()) {
+            while (i != listname.size() || i != listname.size()) {
                 listbooks.add(new ArrayVi(listname.get(i), "Valoracion = "+listvaloration.get(i)));
                 i++;
             }
